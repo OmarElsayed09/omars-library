@@ -1,0 +1,271 @@
+{
+  "model": "qwen2.5:3b",
+  "embeddings": "bge-m3",
+  "split": "dev",
+  "page_hits": 8,
+  "answerable": 12,
+  "median_seconds": 0.9,
+  "cases": [
+    {
+      "split": "dev",
+      "source": "MIT18_06S10_L01.pdf",
+      "question": "مين المدرس اللي عرّف نفسه في بداية المحاضرة؟",
+      "expected": "Gilbert Strang / جيلبرت سترانج",
+      "pages": [
+        1
+      ],
+      "retrieved": [
+        1,
+        7,
+        8,
+        6
+      ],
+      "answer": "في بداية المحاضرة، عرّف نفسه المدرس Gilbert Strang.",
+      "seconds": 0.76,
+      "page_hit": true
+    },
+    {
+      "split": "dev",
+      "source": "MIT18_06S10_L01.pdf",
+      "question": "What's the title of the textbook named in the opening?",
+      "expected": "Introduction to Linear Algebra",
+      "pages": [
+        1
+      ],
+      "retrieved": [
+        1
+      ],
+      "answer": "[MIT18_06S10_L01.pdf, page 1, chunk 1] اللغة الإنجليزية\nThe title of the textbook named in the opening is \"Introduction to Linear Algebra.\"",
+      "seconds": 1.07,
+      "page_hit": true
+    },
+    {
+      "split": "dev",
+      "source": "MIT18_06S10_L01.pdf",
+      "question": "تمثيل الصفوف في بعدين بيرسم خطوط ولا كرات؟",
+      "expected": "lines / خطوط",
+      "pages": [
+        1,
+        2,
+        3
+      ],
+      "retrieved": [
+        4,
+        1,
+        7,
+        6
+      ],
+      "answer": "الصفوف في بعدين تيرسم خطوط، ولن نستخدم الكرات في هذا التمثيل.",
+      "seconds": 1.02,
+      "page_hit": true
+    },
+    {
+      "split": "dev",
+      "source": "MIT18_06S10_L01.pdf",
+      "question": "ما اسم العملية التي تجمع مضاعفات أعمدة المصفوفة؟",
+      "expected": "linear combination / تركيب خطي",
+      "pages": [
+        4,
+        5,
+        11
+      ],
+      "retrieved": [
+        3
+      ],
+      "answer": "[1] العملية التي تجمع مضاعفات أعمدة المصفوفة تسمى بالج comination الخطيّة.",
+      "seconds": 0.77,
+      "page_hit": false
+    },
+    {
+      "split": "dev",
+      "source": "MIT18_06S10_L01.pdf",
+      "question": "What color jacket did the lecturer wear?",
+      "expected": "ABSTAIN",
+      "pages": [],
+      "retrieved": [
+        11,
+        4,
+        1
+      ],
+      "answer": "Could not find in the document",
+      "seconds": 0.52,
+      "page_hit": null
+    },
+    {
+      "split": "dev",
+      "source": "MIT18_06S10_L02.pdf",
+      "question": "What kind of matrix exchanges two rows?",
+      "expected": "permutation matrix / مصفوفة تبديل",
+      "pages": [
+        10
+      ],
+      "retrieved": [
+        10,
+        10,
+        10,
+        7
+      ],
+      "answer": "الخيار الذي ي交换 رديتين هو الدالة التباديل الترانسونية. وفقاً للجزء [1] من الملف المرفق.",
+      "seconds": 0.9,
+      "page_hit": true
+    },
+    {
+      "split": "dev",
+      "source": "MIT18_06S10_L02.pdf",
+      "question": "لما بنلحق الطرف الأيمن بالمصفوفة، اسمها إيه؟",
+      "expected": "augmented matrix / مصفوفة موسعة",
+      "pages": [
+        4,
+        5
+      ],
+      "retrieved": [
+        4,
+        2,
+        5,
+        5
+      ],
+      "answer": "الطرف الأيمن بالمصفوفة، كما وضحنا في passage [1] من الملف، يتم إلحاقه بالمصفوفة كأول مصفوفة إضافية. اسم هذه الإضافات \"ال augmented matrix\" وهي تعني أنه تم إضافة شيء جديد.",
+      "seconds": 1.73,
+      "page_hit": true
+    },
+    {
+      "split": "dev",
+      "source": "MIT18_06S10_L02.pdf",
+      "question": "ما الخطوة التي تبدأ الحل بعد الوصول إلى مصفوفة مثلثية؟",
+      "expected": "back substitution / التعويض العكسي",
+      "pages": [
+        5,
+        6
+      ],
+      "retrieved": [
+        1,
+        2,
+        2,
+        3
+      ],
+      "answer": "[MIT18_06S10_L02.pdf, page 2, chunk 6] توضح هذه الصفحة أن الخطوة التالية بعد تطبيق إزالة الخطوة الأولى هي \"الخطوة 3,1\". ولكن بالفعل، لدينا صفر في هذه الموضع. لذا فإن القاسم هو صفر. يأخذون الصفر من هذا المعادلة لكي يصبح هذا العدد. وهذا هو، لا نزال عند أول سفينة. الخطوة التالية هي الخطوة 2,2 ، والذي تم ظهوره هناك. وكما هو واضح، تحتاج إلى القاسم المناسب، وهو 2. يبدو أن الإجابة ستكون في الخطوة 2,2.",
+      "seconds": 3.71,
+      "page_hit": false
+    },
+    {
+      "split": "dev",
+      "source": "MIT18_06S10_L02.pdf",
+      "question": "What room number is the final exam in?",
+      "expected": "ABSTAIN",
+      "pages": [],
+      "retrieved": [
+        8,
+        2,
+        5,
+        4
+      ],
+      "answer": "Could not find in the document.",
+      "seconds": 0.28,
+      "page_hit": null
+    },
+    {
+      "split": "dev",
+      "source": "MIT18_06S10_L02.pdf",
+      "question": "عكس عملية طرح تلات أضعاف الصف الأول من التاني بنعمله إزاي؟",
+      "expected": "add three times row one to row two",
+      "pages": [
+        12
+      ],
+      "retrieved": [
+        11,
+        7,
+        6,
+        12
+      ],
+      "answer": "[MIT18_06S10_L02.pdf, page 12, chunk 44] عكس عملية طرح تلات أضعاف الصف الأول من التاني بنعمله إزاي؟ ماذا فعل professor كي عكس ذلك، هو أضاف 3 أضعاف الصف الأول إلى الصف الثاني.",
+      "seconds": 1.74,
+      "page_hit": true
+    },
+    {
+      "split": "dev",
+      "source": "MIT18_06S10_L03.pdf",
+      "question": "What is the main operation introduced at the opening?",
+      "expected": "matrix multiplication",
+      "pages": [
+        1
+      ],
+      "retrieved": [],
+      "answer": "Could not find in the document.",
+      "seconds": 0.44,
+      "page_hit": false
+    },
+    {
+      "split": "dev",
+      "source": "MIT18_06S10_L03.pdf",
+      "question": "حاصل ضرب عمود في صف بيطلع مصفوفة ولا رقم واحد؟",
+      "expected": "matrix / مصفوفة",
+      "pages": [
+        4,
+        5
+      ],
+      "retrieved": [
+        8,
+        8,
+        10,
+        6
+      ],
+      "answer": "على الأرجح لا، حسب الجزء [MIT18_06S10_L03.pdf, الصفحة 8, جزء 27] من الملف، عندما تضرب عمودين في صف، يجب أن تنطوي النتيجة على مصفوفة، وليس رقم واحد أو غيرها من الأعداد.",
+      "seconds": 1.95,
+      "page_hit": false
+    },
+    {
+      "split": "dev",
+      "source": "MIT18_06S10_L03.pdf",
+      "question": "What matrix do you get by multiplying a square invertible matrix by its inverse?",
+      "expected": "identity",
+      "pages": [
+        6,
+        8,
+        9,
+        11
+      ],
+      "retrieved": [
+        7,
+        5,
+        6,
+        6
+      ],
+      "answer": "[A].",
+      "seconds": 0.17,
+      "page_hit": true
+    },
+    {
+      "split": "dev",
+      "source": "MIT18_06S10_L03.pdf",
+      "question": "المحاضر كان معاه كام جنيه في محفظته؟",
+      "expected": "ABSTAIN",
+      "pages": [],
+      "retrieved": [
+        9
+      ],
+      "answer": " tidak ada informasi tentang jumlah rupiah dalam kantong presenter dalam paragraf yang diberikan. [1]",
+      "seconds": 0.69,
+      "page_hit": null
+    },
+    {
+      "split": "dev",
+      "source": "MIT18_06S10_L03.pdf",
+      "question": "ما اسم طريقة الحذف المستخدمة لإيجاد المعكوس بالمصفوفة الموسعة؟",
+      "expected": "Gauss-Jordan",
+      "pages": [
+        9,
+        10,
+        11
+      ],
+      "retrieved": [
+        8,
+        11,
+        9,
+        8
+      ],
+      "answer": "كانت إجابتك غير مطابقة للفاصل الزمني المحدد، ولكن من خلال التحقيقات في passages المقدمة، يبدو أن إجابة السؤال ليست مطابقة لطريقة مباشرة ذكرت في passages محددة. لا يوجد ذكر مباشر للطريقة المستخدمة لإيجاد المعكوس باستخدام الحذف بالمصفوفات الموسعة.",
+      "seconds": 2.2,
+      "page_hit": true
+    }
+  ]
+}

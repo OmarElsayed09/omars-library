@@ -1,0 +1,374 @@
+{
+  "model": "qwen2.5:latest",
+  "embeddings": "bge-m3",
+  "split": "all",
+  "page_hits": 11,
+  "answerable": 16,
+  "median_seconds": 26.35,
+  "cases": [
+    {
+      "split": "dev",
+      "source": "MIT18_06S10_L01.pdf",
+      "question": "مين المدرس اللي عرّف نفسه في بداية المحاضرة؟",
+      "expected": "Gilbert Strang / جيلبرت سترانج",
+      "pages": [
+        1
+      ],
+      "retrieved": [
+        1,
+        7,
+        8,
+        6
+      ],
+      "answer": "المدرس الذي عرف نفسه في بداية المحاضرة هو جيلبرت سترانج. قال في بداية الفيديو: \"Hi. This is the first lecture in MIT's course 18.06, linear algebra, and I'm Gilbert Strang.\"",
+      "seconds": 29.95,
+      "page_hit": true
+    },
+    {
+      "split": "dev",
+      "source": "MIT18_06S10_L01.pdf",
+      "question": "What's the title of the textbook named in the opening?",
+      "expected": "Introduction to Linear Algebra",
+      "pages": [
+        1
+      ],
+      "retrieved": [
+        1
+      ],
+      "answer": "The title of the textbook named in the opening is \"Introduction to Linear Algebra\". [1]",
+      "seconds": 15.51,
+      "page_hit": true
+    },
+    {
+      "split": "dev",
+      "source": "MIT18_06S10_L01.pdf",
+      "question": "تمثيل الصفوف في بعدين بيرسم خطوط ولا كرات؟",
+      "expected": "lines / خطوط",
+      "pages": [
+        1,
+        2,
+        3
+      ],
+      "retrieved": [
+        1,
+        11,
+        3,
+        3
+      ],
+      "answer": "تمثيل الصفوف في بعدين يتم برسم خطوط، لا كرات. في المثال الذي ذكرته، تم استخدام خطين لتمثيل المعادلة الخطية \\(2x - y = 0\\) و\\(-x + 2y = 3\\). حيث يلتقي الخطان في نقطة واحدة تمثل حل المعادلات، وهي النقطة \\(x = 1, y = 2\\).",
+      "seconds": 32.19,
+      "page_hit": true
+    },
+    {
+      "split": "dev",
+      "source": "MIT18_06S10_L01.pdf",
+      "question": "ما اسم العملية التي تجمع مضاعفات أعمدة المصفوفة؟",
+      "expected": "linear combination / تركيب خطي",
+      "pages": [
+        4,
+        5,
+        11
+      ],
+      "retrieved": [
+        11,
+        7,
+        3,
+        3
+      ],
+      "answer": "العملية التي تجمع مضاعفات أعمدة المصفوفة تسمى \"الجمع الخطي\" أو \"الlinear combination\" باللغة الإنجليزية.",
+      "seconds": 33.56,
+      "page_hit": true
+    },
+    {
+      "split": "dev",
+      "source": "MIT18_06S10_L01.pdf",
+      "question": "What color jacket did the lecturer wear?",
+      "expected": "ABSTAIN",
+      "pages": [],
+      "retrieved": [
+        11,
+        4,
+        1
+      ],
+      "answer": "The provided excerpts do not contain any information about the lecturer's clothing, including the color of their jacket. Therefore, it's not possible to answer the question based on the given text.",
+      "seconds": 18.56,
+      "page_hit": null
+    },
+    {
+      "split": "holdout",
+      "source": "MIT18_06S10_L01.pdf",
+      "question": "في مثال تسع معادلات وتسعة مجاهيل، كام عمود في المصفوفة؟",
+      "expected": "9",
+      "pages": [
+        10
+      ],
+      "retrieved": [
+        10,
+        10,
+        10,
+        9
+      ],
+      "answer": "في مثال تسع معادلات وتسعة مجاهيل، يكون هناك تسع أعمدة في المصفوفة [1].",
+      "seconds": 27.18,
+      "page_hit": true
+    },
+    {
+      "split": "holdout",
+      "source": "MIT18_06S10_L01.pdf",
+      "question": "What's the textbook title he uses?",
+      "expected": "Introduction to Linear Algebra",
+      "pages": [
+        1
+      ],
+      "retrieved": [
+        1
+      ],
+      "answer": "The textbook title he uses is \"Introduction to Linear Algebra\" [1].",
+      "seconds": 24.83,
+      "page_hit": true
+    },
+    {
+      "split": "dev",
+      "source": "MIT18_06S10_L02.pdf",
+      "question": "What kind of matrix exchanges two rows?",
+      "expected": "permutation matrix / مصفوفة تبديل",
+      "pages": [
+        10
+      ],
+      "retrieved": [
+        10,
+        10,
+        10,
+        7
+      ],
+      "answer": "A permutation matrix exchanges two rows [1, 3]. Specifically, it is created by exchanging the rows of the identity matrix [3].",
+      "seconds": 17.03,
+      "page_hit": true
+    },
+    {
+      "split": "dev",
+      "source": "MIT18_06S10_L02.pdf",
+      "question": "لما بنلحق الطرف الأيمن بالمصفوفة، اسمها إيه؟",
+      "expected": "augmented matrix / مصفوفة موسعة",
+      "pages": [
+        4,
+        5
+      ],
+      "retrieved": [
+        1,
+        5,
+        7,
+        8
+      ],
+      "answer": "إسمها المصفوفة المكملة أو المصفوفة الممتدة [1].",
+      "seconds": 26.11,
+      "page_hit": true
+    },
+    {
+      "split": "dev",
+      "source": "MIT18_06S10_L02.pdf",
+      "question": "ما الخطوة التي تبدأ الحل بعد الوصول إلى مصفوفة مثلثية؟",
+      "expected": "back substitution / التعويض العكسي",
+      "pages": [
+        5,
+        6
+      ],
+      "retrieved": [
+        1,
+        2,
+        2,
+        3
+      ],
+      "answer": "بعد الوصول إلى مصفوفة مثلثية من خلال عملية الإlimينيشن، يأتي الخطوة التالية هي حل النظام المثلثي المكتسب. هذا يعني استخدام طريقة الretro-substitution لحل النظام من الأعلى إلى الأسفل، حيث نبدأ من المعادلة الأخيرة (المعادلة التي تحتوي على متغير واحد فقط) ونحل التوازن تدريجياً للحصول على قيم المتغيرات.",
+      "seconds": 33.3,
+      "page_hit": false
+    },
+    {
+      "split": "dev",
+      "source": "MIT18_06S10_L02.pdf",
+      "question": "What room number is the final exam in?",
+      "expected": "ABSTAIN",
+      "pages": [],
+      "retrieved": [
+        8,
+        2,
+        5,
+        4
+      ],
+      "answer": "The information provided in the excerpts does not contain any mention of a final exam or a room number for it. Therefore, I cannot determine the room number of the final exam from the given text.",
+      "seconds": 17.63,
+      "page_hit": null
+    },
+    {
+      "split": "dev",
+      "source": "MIT18_06S10_L02.pdf",
+      "question": "عكس عملية طرح تلات أضعاف الصف الأول من التاني بنعمله إزاي؟",
+      "expected": "add three times row one to row two",
+      "pages": [
+        12
+      ],
+      "retrieved": [
+        11,
+        7,
+        6,
+        12
+      ],
+      "answer": "لإعادة الصفوف إلى الحالة الأصلية بعد طرح تلات أضعاف الصف الأول من الصف الثاني، نقوم بعملية إضافة تلات أضعاف الصف الأول إلى الصف الثاني.\n\nإذا كان الصف الثاني بعد التعديل هو \\( R_2' \\)، فيمكننا استرجاعه عن طريق:\n\\[ R_2' + 3R_1 = R_2 \\]\n\nحيث \\( R_1 \\) هو الصف الأول الأصلي، و \\( R_2' \\) هو الصف الثاني بعد طرح تلات أضعاف الصف الأول منه.",
+      "seconds": 34.28,
+      "page_hit": true
+    },
+    {
+      "split": "holdout",
+      "source": "MIT18_06S10_L02.pdf",
+      "question": "What does augmenting the matrix append to it?",
+      "expected": "right hand side / extra column b",
+      "pages": [
+        4,
+        5
+      ],
+      "retrieved": [
+        9,
+        1,
+        8,
+        6
+      ],
+      "answer": "The provided excerpts do not discuss augmenting matrices or what appending something to a matrix entails. Therefore, I cannot derive the answer from the given information.",
+      "seconds": 17.11,
+      "page_hit": false
+    },
+    {
+      "split": "holdout",
+      "source": "MIT18_06S10_L02.pdf",
+      "question": "هو قال سعر تذكرة حضور المحاضرة كام؟",
+      "expected": "ABSTAIN",
+      "pages": [],
+      "retrieved": [
+        5,
+        11,
+        8,
+        1
+      ],
+      "answer": "الموديل مقدرش يصيغ رد واضح على السؤال ده. جرّب تحدد الجزء اللي عايز توضيحه.",
+      "seconds": 30.68,
+      "page_hit": null
+    },
+    {
+      "split": "dev",
+      "source": "MIT18_06S10_L03.pdf",
+      "question": "What is the main operation introduced at the opening?",
+      "expected": "matrix multiplication",
+      "pages": [
+        1
+      ],
+      "retrieved": [],
+      "answer": "I couldn't find enough evidence in the documents to answer that.",
+      "seconds": 4.06,
+      "page_hit": false
+    },
+    {
+      "split": "dev",
+      "source": "MIT18_06S10_L03.pdf",
+      "question": "حاصل ضرب عمود في صف بيطلع مصفوفة ولا رقم واحد؟",
+      "expected": "matrix / مصفوفة",
+      "pages": [
+        4,
+        5
+      ],
+      "retrieved": [
+        8,
+        8,
+        10,
+        6
+      ],
+      "answer": "نعم، حاصل ضرب عمود في صف هو مصفوفة وليس رقم واحد. العمود هو مصفوفة عمودية (مصفوفة مكونة من سطر واحد وعدد من الأعمدة)، والصف هو مصفوفة عرضية (مصفوفة مكونة من عمود واحد وعدد من السطور). عندما تضرب عمودًا في صف، فإنك تحصل على مصفوفة مكونة من عدد السطور في الصف (أو عدد الأعمدة في العمود) من العناصر.\n\nمثلاً، إذا كان العمود هو:\n\n\\[\n\\begin{bmatrix}\n1 \\\\\n2 \\\\\n3\n\\end{bmatrix}\n\\]\n\nوكان الصف هو:\n\n\\[\n\\begin{bmatrix}\n4 & 5 & 6\n\\end{bmatrix}\n\\]\n\nفالحاصل الضرب هو:\n\n\\[\n\\begin{bmatrix}\n1 \\cdot 4 & 1 \\cdot 5 & 1 \\cdot 6 \\\\\n2 \\cdot 4 & 2 \\cdot 5 & 2 \\cdot 6 \\\\\n3 \\cdot 4 & 3 \\cdot 5 & 3 \\cdot 6\n\\end{bmatrix} = \n\\begin{bmatrix}\n4 & 5 & 6 \\\\\n8 & 10 & 12 \\\\\n12 & 15 & 18\n\\end{bmatrix}\n\\]\n\nوهكذا تحصل على مصفوفة 3x3، وليس رقمًا واحدًا.",
+      "seconds": 51.95,
+      "page_hit": false
+    },
+    {
+      "split": "dev",
+      "source": "MIT18_06S10_L03.pdf",
+      "question": "What matrix do you get by multiplying a square invertible matrix by its inverse?",
+      "expected": "identity",
+      "pages": [
+        6,
+        8,
+        9,
+        11
+      ],
+      "retrieved": [
+        7,
+        5,
+        6,
+        6
+      ],
+      "answer": "You get the identity matrix. This is the key equation mentioned in excerpt [3], where it states \"But a real -- an inverse for a square matrix could be on the right as well -- this is true, too, that it's -- if I have a -- yeah in fact, this is not -- this is probably the -- this is something that's not easy to prove, but it works.\" While the exact wording is not given, the concept of multiplying a square matrix by its inverse resulting in the identity matrix is clearly implied.",
+      "seconds": 26.35,
+      "page_hit": true
+    },
+    {
+      "split": "dev",
+      "source": "MIT18_06S10_L03.pdf",
+      "question": "المحاضر كان معاه كام جنيه في محفظته؟",
+      "expected": "ABSTAIN",
+      "pages": [],
+      "retrieved": [
+        10
+      ],
+      "answer": "الدليل المقدم لا يحتوي على معلومات حول كمية المال التي كان بها المحاضر في محفظته. المقطع يتحدث عن عملية إlimination في الرياضيات وليس عن محفظة المحاضر.",
+      "seconds": 27.76,
+      "page_hit": null
+    },
+    {
+      "split": "dev",
+      "source": "MIT18_06S10_L03.pdf",
+      "question": "ما اسم طريقة الحذف المستخدمة لإيجاد المعكوس بالمصفوفة الموسعة؟",
+      "expected": "Gauss-Jordan",
+      "pages": [
+        9,
+        10,
+        11
+      ],
+      "retrieved": [
+        9,
+        11,
+        10,
+        8
+      ],
+      "answer": "طريقة الحذف المستخدمة لإيجاد المعكوس بالمصفوفة الموسعة هي طريقة جاوس-جونر (Gauss-Jordan). هذه الطريقة تتضمن إجراء خطوات الحذف حتى تصبح الجزء الأيسر من المصفوفة الموسعة مساوية للمatrix الهوية، وستظهر المعكوسة للمصفوفة في الجزء الأيمن.",
+      "seconds": 35.87,
+      "page_hit": true
+    },
+    {
+      "split": "holdout",
+      "source": "MIT18_06S10_L03.pdf",
+      "question": "In the outer product example, do the columns point in the same direction?",
+      "expected": "yes / same direction",
+      "pages": [
+        4,
+        5
+      ],
+      "retrieved": [
+        8,
+        9,
+        9,
+        2
+      ],
+      "answer": "No, the columns do not point in the same direction. The excerpt states that the two columns of the matrix point in different directions, which implies they are linearly independent [1].",
+      "seconds": 17.82,
+      "page_hit": false
+    },
+    {
+      "split": "holdout",
+      "source": "MIT18_06S10_L03.pdf",
+      "question": "What is the instructor's home street address?",
+      "expected": "ABSTAIN",
+      "pages": [],
+      "retrieved": [
+        1
+      ],
+      "answer": "The provided excerpt does not contain any information about the instructor's home street address. The text discusses the process of calculating a dot product involving indices in tensors A and B, but does not mention any personal details such as an address.",
+      "seconds": 17.38,
+      "page_hit": null
+    }
+  ]
+}

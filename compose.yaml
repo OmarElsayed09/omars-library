@@ -1,0 +1,17 @@
+services:
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      # Ollama runs on the host; change this if it runs elsewhere.
+      OLLAMA_HOST: http://host.docker.internal:11434
+      DOCS_DIR: /data/docs
+      DB_DIR: /data/db
+      CHAT_DB_PATH: /data/chats.sqlite3
+    volumes:
+      - ./docs:/data/docs
+      - ./db:/data/db
+      - ./chats.sqlite3:/data/chats.sqlite3
+    extra_hosts:
+      - "host.docker.internal:host-gateway"

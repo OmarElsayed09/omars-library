@@ -1,0 +1,67 @@
+{
+  "top_k": 4,
+  "recall_at_k": 1.0,
+  "mrr_at_k": 0.8636363636363636,
+  "mean_precision_at_k": 0.25,
+  "mean_ndcg_at_k": 0.8993444782467612,
+  "cases": [
+    {
+      "query": "Which parts make up a microprocessor?",
+      "expected": "lec 1 (1).pdf:1",
+      "rank": 2
+    },
+    {
+      "query": "How many addresses can a 16-bit address bus generate?",
+      "expected": "lec 1 (1).pdf:1",
+      "rank": 1
+    },
+    {
+      "query": "How many bits are the 8086 registers?",
+      "expected": "lec 1 (1).pdf:1",
+      "rank": 1
+    },
+    {
+      "query": "What is the maximum number of locations for a 16-bit offset?",
+      "expected": "lec 1 (1).pdf:1",
+      "rank": 1
+    },
+    {
+      "query": "Which processor handles arithmetic, logic and control activities?",
+      "expected": "lec 1 (1).pdf:2",
+      "rank": 1
+    },
+    {
+      "query": "How large is a word in bytes?",
+      "expected": "lec 1 (1).pdf:2",
+      "rank": 2
+    },
+    {
+      "query": "What internal storage speeds up processor operations?",
+      "expected": "lec 1 (1).pdf:2",
+      "rank": 1
+    },
+    {
+      "query": "Which section declares initialized data or constants?",
+      "expected": "lec 1 (1).pdf:2",
+      "rank": 2
+    },
+    {
+      "query": "How many words are needed to store hexadecimal 0534?",
+      "expected": "lec 1 (1).pdf:4",
+      "rank": 1
+    },
+    {
+      "query": "How many bits represent a word address in a one megabyte memory?",
+      "expected": "lec 1 (1).pdf:4",
+      "rank": 1
+    },
+    {
+      "query": "How many opcode bits are in a 16-bit instruction with a 12-bit address bus?",
+      "expected": "lec 1 (1).pdf:5",
+      "rank": 1
+    }
+  ],
+  "false_positives": [],
+  "automated": true,
+  "manual_verification": false
+}

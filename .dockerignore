@@ -1,0 +1,9 @@
+**
+!Dockerfile
+!requirements.txt
+!agent.py
+!api.py
+!rag/
+!rag/**
+**/__pycache__/
+**/*.py[cod]

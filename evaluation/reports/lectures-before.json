@@ -1,0 +1,271 @@
+{
+  "model": "qwen2.5:3b",
+  "embeddings": "bge-m3",
+  "split": "dev",
+  "page_hits": 8,
+  "answerable": 12,
+  "median_seconds": 0.99,
+  "cases": [
+    {
+      "split": "dev",
+      "source": "MIT18_06S10_L01.pdf",
+      "question": "مين المدرس اللي عرّف نفسه في بداية المحاضرة؟",
+      "expected": "Gilbert Strang / جيلبرت سترانج",
+      "pages": [
+        1
+      ],
+      "retrieved": [
+        1,
+        7,
+        8,
+        6
+      ],
+      "answer": "في بداية المحاضرة، عرّف نفسه المدرس نفسه كجيلبرت سرج.",
+      "seconds": 2.37,
+      "page_hit": true
+    },
+    {
+      "split": "dev",
+      "source": "MIT18_06S10_L01.pdf",
+      "question": "What's the title of the textbook named in the opening?",
+      "expected": "Introduction to Linear Algebra",
+      "pages": [
+        1
+      ],
+      "retrieved": [
+        1
+      ],
+      "answer": "The title of the textbook named in the opening is \"Introduction to Linear Algebra\".",
+      "seconds": 0.47,
+      "page_hit": true
+    },
+    {
+      "split": "dev",
+      "source": "MIT18_06S10_L01.pdf",
+      "question": "تمثيل الصفوف في بعدين بيرسم خطوط ولا كرات؟",
+      "expected": "lines / خطوط",
+      "pages": [
+        1,
+        2,
+        3
+      ],
+      "retrieved": [
+        4,
+        1,
+        7,
+        6
+      ],
+      "answer": "وفقا للعext المقدم، تمثيل الصفوف (أو الصفوف من حيث المعادلات الخطية) يبسط إلى خطوط في حالة المعادلات الخطية البسيطة مثل المعادلات في الديمensions 2. ولكن في الحالات المعقدة أو المعادلات في ديمensions أكبر من 2، فإن التمثيل أكثر تعقيداً ولا يبسط إلى رؤية كروت أو خطوط، بل يتطلب نموذجاً رياضياً أكثر تعقيداً مثل الأسطح في الديمensions الأعلى. لم يتم ذكر أي كرات في هذا العext.",
+      "seconds": 3.4,
+      "page_hit": true
+    },
+    {
+      "split": "dev",
+      "source": "MIT18_06S10_L01.pdf",
+      "question": "ما اسم العملية التي تجمع مضاعفات أعمدة المصفوفة؟",
+      "expected": "linear combination / تركيب خطي",
+      "pages": [
+        4,
+        5,
+        11
+      ],
+      "retrieved": [
+        3
+      ],
+      "answer": "العملية التي تجمع مضاعفات أعمدة المصفوفة هي \"الجداء الخطي\" (linear combination). وفقاً للchunks المحدد في الملف [MIT18_06S10_L01.pdf, الصفحة 3, الن節 10]، تم توضيح هذا المصطلح في بداية المقطع.",
+      "seconds": 1.75,
+      "page_hit": false
+    },
+    {
+      "split": "dev",
+      "source": "MIT18_06S10_L01.pdf",
+      "question": "What color jacket did the lecturer wear?",
+      "expected": "ABSTAIN",
+      "pages": [],
+      "retrieved": [
+        11,
+        4,
+        1
+      ],
+      "answer": "Could not find in the document",
+      "seconds": 0.53,
+      "page_hit": null
+    },
+    {
+      "split": "dev",
+      "source": "MIT18_06S10_L02.pdf",
+      "question": "What kind of matrix exchanges two rows?",
+      "expected": "permutation matrix / مصفوفة تبديل",
+      "pages": [
+        10
+      ],
+      "retrieved": [
+        10,
+        10,
+        10,
+        7
+      ],
+      "answer": "The matrix that exchanges two rows is called a permutation matrix.",
+      "seconds": 0.7,
+      "page_hit": true
+    },
+    {
+      "split": "dev",
+      "source": "MIT18_06S10_L02.pdf",
+      "question": "لما بنلحق الطرف الأيمن بالمصفوفة، اسمها إيه؟",
+      "expected": "augmented matrix / مصفوفة موسعة",
+      "pages": [
+        4,
+        5
+      ],
+      "retrieved": [
+        4,
+        2,
+        5,
+        5
+      ],
+      "answer": "الطرف الأيمن بالمصفوفة معتمد على مثال المعادلات الخطية التي تم توضيحها في الدرس. في سياق الدرس المذكور، عندما تمت الإشارة إلى التحديد معامل الطرف الأيمن من المعادلات، تم إعطاء الطرف الأيمن برمته كجزء من المصفوفة المعكوسة أو المصفوفة المضافة. وبشكل موجز، اسم ذلك الجانب الأيمن للمصفوفة هو \"ال right-hand side\" في اللغة الإنجليزية. في السياق المستقبلي من الدرس، أشار المعلم إلى أن he wrote stuff with x, y-s and z-s in there، ثم بدأ في الكتابة بالكود الم矩阵ي، حيث كان الطرف الأيمن جزءًا من هذا الكود.",
+      "seconds": 4.17,
+      "page_hit": true
+    },
+    {
+      "split": "dev",
+      "source": "MIT18_06S10_L02.pdf",
+      "question": "ما الخطوة التي تبدأ الحل بعد الوصول إلى مصفوفة مثلثية؟",
+      "expected": "back substitution / التعويض العكسي",
+      "pages": [
+        5,
+        6
+      ],
+      "retrieved": [
+        1,
+        2,
+        2,
+        3
+      ],
+      "answer": "كانت الخطوة التالية تبدأ الحل بعد الوصول إلى مصفوفة مثلثية هي الخطوة 3,1. حيث أن المصفوفة كانت مكونة من الطورين الأولين والخطوة الأولى كانت تؤدي إلى صفر في الموقع 2,1. لذا، الخطوة التالية هي الخطوة 3,1، حيث كان الطور الثالث هو الأول في هذه العملية.",
+      "seconds": 2.29,
+      "page_hit": false
+    },
+    {
+      "split": "dev",
+      "source": "MIT18_06S10_L02.pdf",
+      "question": "What room number is the final exam in?",
+      "expected": "ABSTAIN",
+      "pages": [],
+      "retrieved": [
+        8,
+        2,
+        5,
+        4
+      ],
+      "answer": "Could not find in the document",
+      "seconds": 0.66,
+      "page_hit": null
+    },
+    {
+      "split": "dev",
+      "source": "MIT18_06S10_L02.pdf",
+      "question": "عكس عملية طرح تلات أضعاف الصف الأول من التاني بنعمله إزاي؟",
+      "expected": "add three times row one to row two",
+      "pages": [
+        12
+      ],
+      "retrieved": [
+        11,
+        7,
+        6,
+        12
+      ],
+      "answer": "حسب النص المذكور على الصفحة 12 من الملف MIT18_06S10_L02.pdf، الصفحة 12، الجملة 44، يجب أن نقوم بعملية جمع تلات أضعاف الصف الأول مع الصف الثاني لإعادة صياغة الصف الثاني.",
+      "seconds": 1.68,
+      "page_hit": true
+    },
+    {
+      "split": "dev",
+      "source": "MIT18_06S10_L03.pdf",
+      "question": "What is the main operation introduced at the opening?",
+      "expected": "matrix multiplication",
+      "pages": [
+        1
+      ],
+      "retrieved": [],
+      "answer": "Could not find in the document.",
+      "seconds": 0.29,
+      "page_hit": false
+    },
+    {
+      "split": "dev",
+      "source": "MIT18_06S10_L03.pdf",
+      "question": "حاصل ضرب عمود في صف بيطلع مصفوفة ولا رقم واحد؟",
+      "expected": "matrix / مصفوفة",
+      "pages": [
+        4,
+        5
+      ],
+      "retrieved": [
+        8,
+        8,
+        10,
+        6
+      ],
+      "answer": "على الأغلب، لا يمكن أن يخرج حاصل ضرب عمودين في صف ما إلا مصفوفة مربوطة (أو رقم واحد إذا كان العمود والصف واحدين)، وليس رقمًا واحدًا ك_singleton. لكن هذا يعتمد على السياق والهدف من السؤال. في السياق الذي قدمته، يبدو أن السؤال يتعلق بالمصفوفات وليس الأرقام، مما يشير إلى أن العمود والصف قد يكونان عمودين في مصفوفة، وحاصل ضربهما لا يكون رقمًا واحدًا، بل هو مصفوفة.",
+      "seconds": 3.15,
+      "page_hit": false
+    },
+    {
+      "split": "dev",
+      "source": "MIT18_06S10_L03.pdf",
+      "question": "What matrix do you get by multiplying a square invertible matrix by its inverse?",
+      "expected": "identity",
+      "pages": [
+        6,
+        8,
+        9,
+        11
+      ],
+      "retrieved": [
+        7,
+        5,
+        6,
+        6
+      ],
+      "answer": "According to the information provided in the passages, when you multiply a square invertible matrix by its inverse, you get the identity matrix.",
+      "seconds": 0.99,
+      "page_hit": true
+    },
+    {
+      "split": "dev",
+      "source": "MIT18_06S10_L03.pdf",
+      "question": "المحاضر كان معاه كام جنيه في محفظته؟",
+      "expected": "ABSTAIN",
+      "pages": [],
+      "retrieved": [
+        9
+      ],
+      "answer": "could not find in the document",
+      "seconds": 0.28,
+      "page_hit": null
+    },
+    {
+      "split": "dev",
+      "source": "MIT18_06S10_L03.pdf",
+      "question": "ما اسم طريقة الحذف المستخدمة لإيجاد المعكوس بالمصفوفة الموسعة؟",
+      "expected": "Gauss-Jordan",
+      "pages": [
+        9,
+        10,
+        11
+      ],
+      "retrieved": [
+        8,
+        11,
+        9,
+        8
+      ],
+      "answer": "لا يمكن إيجاد الإجابة من خلال passages المقدمة.",
+      "seconds": 0.71,
+      "page_hit": true
+    }
+  ]
+}

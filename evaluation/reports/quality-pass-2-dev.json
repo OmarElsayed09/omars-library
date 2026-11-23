@@ -1,0 +1,276 @@
+{
+  "model": "qwen2.5:latest",
+  "embeddings": "bge-m3",
+  "split": "dev",
+  "page_hits": 8,
+  "answerable": 12,
+  "median_seconds": 26.17,
+  "cases": [
+    {
+      "split": "dev",
+      "source": "MIT18_06S10_L01.pdf",
+      "question": "مين المدرس اللي عرّف نفسه في بداية المحاضرة؟",
+      "expected": "Gilbert Strang / جيلبرت سترانج",
+      "pages": [
+        1
+      ],
+      "retrieved": [
+        1,
+        8,
+        6,
+        8
+      ],
+      "answer": "المدرس هو جيلبرت سترانج. ذكر في بداية المقطع الأول أنه \"أنا جيلبرت سترانج\". [1]",
+      "seconds": 27.27,
+      "page_hit": true
+    },
+    {
+      "split": "dev",
+      "source": "MIT18_06S10_L01.pdf",
+      "question": "What's the title of the textbook named in the opening?",
+      "expected": "Introduction to Linear Algebra",
+      "pages": [
+        1
+      ],
+      "retrieved": [
+        1
+      ],
+      "answer": "The title of the textbook named in the opening is \"Introduction to Linear Algebra\". [1]",
+      "seconds": 15.53,
+      "page_hit": true
+    },
+    {
+      "split": "dev",
+      "source": "MIT18_06S10_L01.pdf",
+      "question": "تمثيل الصفوف في بعدين بيرسم خطوط ولا كرات؟",
+      "expected": "lines / خطوط",
+      "pages": [
+        1,
+        2,
+        3
+      ],
+      "retrieved": [
+        11,
+        7,
+        4,
+        6
+      ],
+      "answer": "تمثيل الصفوف في بعدين يُرسم خطوط وليس كرات. [1]",
+      "seconds": 26.17,
+      "page_hit": false
+    },
+    {
+      "split": "dev",
+      "source": "MIT18_06S10_L01.pdf",
+      "question": "ما اسم العملية التي تجمع مضاعفات أعمدة المصفوفة؟",
+      "expected": "linear combination / تركيب خطي",
+      "pages": [
+        4,
+        5,
+        11
+      ],
+      "retrieved": [
+        3,
+        11,
+        3,
+        10
+      ],
+      "answer": "اسم العملية التي تجمع مضاعفات أعمدة المصفوفة هو \"الجمع الخطي\" أو \"الlinear combination\" كما ذكر في المقطع الأول [1].",
+      "seconds": 27.67,
+      "page_hit": true
+    },
+    {
+      "split": "dev",
+      "source": "MIT18_06S10_L01.pdf",
+      "question": "What color jacket did the lecturer wear?",
+      "expected": "ABSTAIN",
+      "pages": [],
+      "retrieved": [
+        1,
+        8
+      ],
+      "answer": "The provided excerpts do not contain any information about the lecturer's attire, including the color of his jacket. Therefore, the requested fact cannot be determined from the given evidence [1].",
+      "seconds": 20.01,
+      "page_hit": null
+    },
+    {
+      "split": "dev",
+      "source": "MIT18_06S10_L02.pdf",
+      "question": "What kind of matrix exchanges two rows?",
+      "expected": "permutation matrix / مصفوفة تبديل",
+      "pages": [
+        10
+      ],
+      "retrieved": [
+        10,
+        10,
+        10,
+        10
+      ],
+      "answer": "A permutation matrix exchanges two rows [1][2]. Specifically, to exchange rows of a matrix, you can create a permutation matrix by exchanging the corresponding rows of the identity matrix [2].",
+      "seconds": 17.64,
+      "page_hit": true
+    },
+    {
+      "split": "dev",
+      "source": "MIT18_06S10_L02.pdf",
+      "question": "لما بنلحق الطرف الأيمن بالمصفوفة، اسمها إيه؟",
+      "expected": "augmented matrix / مصفوفة موسعة",
+      "pages": [
+        4,
+        5
+      ],
+      "retrieved": [
+        5,
+        5,
+        9,
+        10
+      ],
+      "answer": "الطرف الأيمن في المصفوفة يسمى الطرف المستقل أو القسم المستقل [1].",
+      "seconds": 25.89,
+      "page_hit": true
+    },
+    {
+      "split": "dev",
+      "source": "MIT18_06S10_L02.pdf",
+      "question": "ما الخطوة التي تبدأ الحل بعد الوصول إلى مصفوفة مثلثية؟",
+      "expected": "back substitution / التعويض العكسي",
+      "pages": [
+        5,
+        6
+      ],
+      "retrieved": [
+        2,
+        3,
+        3,
+        8
+      ],
+      "answer": "بعد الوصول إلى مصفوفة مثلثية، يأتي الخطوة التالية هي مرحلة الرجوع (Back Substitution) [3].",
+      "seconds": 27.55,
+      "page_hit": false
+    },
+    {
+      "split": "dev",
+      "source": "MIT18_06S10_L02.pdf",
+      "question": "What room number is the final exam in?",
+      "expected": "ABSTAIN",
+      "pages": [],
+      "retrieved": [
+        10,
+        2,
+        5,
+        2
+      ],
+      "answer": "The question about the final exam room number is not addressed in any of the provided excerpts. Therefore, I cannot provide a factual answer based on the given information [1].",
+      "seconds": 20.72,
+      "page_hit": null
+    },
+    {
+      "split": "dev",
+      "source": "MIT18_06S10_L02.pdf",
+      "question": "عكس عملية طرح تلات أضعاف الصف الأول من التاني بنعمله إزاي؟",
+      "expected": "add three times row one to row two",
+      "pages": [
+        12
+      ],
+      "retrieved": [
+        5,
+        11,
+        12,
+        11
+      ],
+      "answer": "نضيف تلات أضعاف الصف الأول إلى الصف الثاني. [2]",
+      "seconds": 26.28,
+      "page_hit": true
+    },
+    {
+      "split": "dev",
+      "source": "MIT18_06S10_L03.pdf",
+      "question": "What is the main operation introduced at the opening?",
+      "expected": "matrix multiplication",
+      "pages": [
+        1
+      ],
+      "retrieved": [],
+      "answer": "I couldn't find enough evidence in the documents to answer that.",
+      "seconds": 4.2,
+      "page_hit": false
+    },
+    {
+      "split": "dev",
+      "source": "MIT18_06S10_L03.pdf",
+      "question": "حاصل ضرب عمود في صف بيطلع مصفوفة ولا رقم واحد؟",
+      "expected": "matrix / مصفوفة",
+      "pages": [
+        4,
+        5
+      ],
+      "retrieved": [
+        8,
+        10,
+        6,
+        10
+      ],
+      "answer": "حاصل ضرب عمود في صف ينتج مصفوفة، لا رقم واحد. [1]",
+      "seconds": 26.4,
+      "page_hit": false
+    },
+    {
+      "split": "dev",
+      "source": "MIT18_06S10_L03.pdf",
+      "question": "What matrix do you get by multiplying a square invertible matrix by its inverse?",
+      "expected": "identity",
+      "pages": [
+        6,
+        8,
+        9,
+        11
+      ],
+      "retrieved": [
+        7,
+        6,
+        6,
+        6
+      ],
+      "answer": "You get the identity matrix. This is a key property of the inverse of a square matrix [2]. If a square matrix \\( A \\) has an inverse \\( A^{-1} \\), then \\( A \\cdot A^{-1} = I \\) and \\( A^{-1} \\cdot A = I \\), where \\( I \\) is the identity matrix [2].",
+      "seconds": 20.74,
+      "page_hit": true
+    },
+    {
+      "split": "dev",
+      "source": "MIT18_06S10_L03.pdf",
+      "question": "المحاضر كان معاه كام جنيه في محفظته؟",
+      "expected": "ABSTAIN",
+      "pages": [],
+      "retrieved": [
+        9,
+        10,
+        5,
+        9
+      ],
+      "answer": "الدليل المقدم لا يذكر كم كان عنده المحاضر من المال في محفظته، لذا لا يمكنني تحديد هذا الرقم. [4]",
+      "seconds": 27.39,
+      "page_hit": null
+    },
+    {
+      "split": "dev",
+      "source": "MIT18_06S10_L03.pdf",
+      "question": "ما اسم طريقة الحذف المستخدمة لإيجاد المعكوس بالمصفوفة الموسعة؟",
+      "expected": "Gauss-Jordan",
+      "pages": [
+        9,
+        10,
+        11
+      ],
+      "retrieved": [
+        9,
+        9,
+        8,
+        10
+      ],
+      "answer": "طريقة الحذف المستخدمة لإيجاد المعكوس بالمصفوفة الموسعة هي طريقة جاوس-جونر [2][4].",
+      "seconds": 27.41,
+      "page_hit": true
+    }
+  ]
+}

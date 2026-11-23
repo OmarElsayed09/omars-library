@@ -1,0 +1,376 @@
+{
+  "model": "qwen2.5:3b",
+  "embeddings": "bge-m3",
+  "split": "all",
+  "page_hits": 11,
+  "answerable": 16,
+  "median_seconds": 0.96,
+  "cases": [
+    {
+      "split": "dev",
+      "source": "MIT18_06S10_L01.pdf",
+      "question": "مين المدرس اللي عرّف نفسه في بداية المحاضرة؟",
+      "expected": "Gilbert Strang / جيلبرت سترانج",
+      "pages": [
+        1
+      ],
+      "retrieved": [
+        1,
+        8,
+        7
+      ],
+      "answer": "المحاضر نفسه عرّف نفسه في بداية المحاضرة، وقال \"I'm Gilbert Strang.\" وهذا يعني أن المدرس هو غايتيل جاير STRANG، على الأغلب.",
+      "seconds": 1.55,
+      "page_hit": true
+    },
+    {
+      "split": "dev",
+      "source": "MIT18_06S10_L01.pdf",
+      "question": "What's the title of the textbook named in the opening?",
+      "expected": "Introduction to Linear Algebra",
+      "pages": [
+        1
+      ],
+      "retrieved": [
+        1
+      ],
+      "answer": "[MIT18_06S10_L01.pdf, page 1, chunk 1] The textbook named in the opening is \"Introduction to Linear Algebra.\"",
+      "seconds": 0.86,
+      "page_hit": true
+    },
+    {
+      "split": "dev",
+      "source": "MIT18_06S10_L01.pdf",
+      "question": "تمثيل الصفوف في بعدين بيرسم خطوط ولا كرات؟",
+      "expected": "lines / خطوط",
+      "pages": [
+        1,
+        2,
+        3
+      ],
+      "retrieved": [
+        2,
+        2,
+        4,
+        3
+      ],
+      "answer": "تمثيل الصفوف في بعدين يرسم خطوط، لا كرات. هذا كما يظهر في الصفحات المذكورة في المرفق PDF، على سبيل المثال [MIT18_06S10_L01.pdf, page 2, chunk 5].",
+      "seconds": 2.08,
+      "page_hit": true
+    },
+    {
+      "split": "dev",
+      "source": "MIT18_06S10_L01.pdf",
+      "question": "ما اسم العملية التي تجمع مضاعفات أعمدة المصفوفة؟",
+      "expected": "linear combination / تركيب خطي",
+      "pages": [
+        4,
+        5,
+        11
+      ],
+      "retrieved": [
+        7,
+        3,
+        11,
+        10
+      ],
+      "answer": "[MIT18_06S10_L01.pdf, page 7, chunk 23] تذكر هذه المقالة أن العملية التي تجمع فيها مضاعفات أعمدة المصفوفة هي \"الخيوط\". وهي تجمع هذه الأعمدة للحصول على الجانب الأيمن الصحيح، والذي هو صفر و neg-1 و 4.",
+      "seconds": 2.46,
+      "page_hit": true
+    },
+    {
+      "split": "dev",
+      "source": "MIT18_06S10_L01.pdf",
+      "question": "What color jacket did the lecturer wear?",
+      "expected": "ABSTAIN",
+      "pages": [],
+      "retrieved": [
+        11,
+        4,
+        1
+      ],
+      "answer": "Could not find in the document",
+      "seconds": 0.53,
+      "page_hit": null
+    },
+    {
+      "split": "holdout",
+      "source": "MIT18_06S10_L01.pdf",
+      "question": "في مثال تسع معادلات وتسعة مجاهيل، كام عمود في المصفوفة؟",
+      "expected": "9",
+      "pages": [
+        10
+      ],
+      "retrieved": [
+        10,
+        10,
+        5,
+        2
+      ],
+      "answer": "في مثال تسع معادلات وتسعة مجاهيل، لدينا تسعة أعمدة في المصفوفة. يتم إشارة إلى هذا في الجزء [MIT18_06S10_L01.pdf, page 10, chunk 33] من passage حيث يقول: \"I don't pretend to do it. But somehow, pretend you do. Pretend we have -- if this was nine equations and nine unknowns, then we would have nine columns, and each one would be a vector in nine-dimensional space and we would be looking at their linear combinations.\"",
+      "seconds": 3.65,
+      "page_hit": true
+    },
+    {
+      "split": "holdout",
+      "source": "MIT18_06S10_L01.pdf",
+      "question": "What's the textbook title he uses?",
+      "expected": "Introduction to Linear Algebra",
+      "pages": [
+        1
+      ],
+      "retrieved": [
+        1,
+        2
+      ],
+      "answer": "The textbook used for the course is Introduction to Linear Algebra. This information is directly stated in the passage [1] from the document.",
+      "seconds": 1.16,
+      "page_hit": true
+    },
+    {
+      "split": "dev",
+      "source": "MIT18_06S10_L02.pdf",
+      "question": "What kind of matrix exchanges two rows?",
+      "expected": "permutation matrix / مصفوفة تبديل",
+      "pages": [
+        10
+      ],
+      "retrieved": [
+        10,
+        10,
+        10,
+        7
+      ],
+      "answer": "a permutation matrix.",
+      "seconds": 0.5,
+      "page_hit": true
+    },
+    {
+      "split": "dev",
+      "source": "MIT18_06S10_L02.pdf",
+      "question": "لما بنلحق الطرف الأيمن بالمصفوفة، اسمها إيه؟",
+      "expected": "augmented matrix / مصفوفة موسعة",
+      "pages": [
+        4,
+        5
+      ],
+      "retrieved": [
+        2,
+        5,
+        2,
+        4
+      ],
+      "answer": "[MIT18_06S10_L02.pdf, page 2, chunk 19] ذكر passage 2 أن \"كما هو واضح، الطرف الأيمن يتم حفظه مع القيم الأصلية، والآن أود استخدام لغة أقصر وأنا أكتب الأعمدة في المصفوفة. وحاليًا أود كتابة العمليات التي أقوم بها في صورة المصفوفات، هل صحيح؟\".",
+      "seconds": 2.89,
+      "page_hit": true
+    },
+    {
+      "split": "dev",
+      "source": "MIT18_06S10_L02.pdf",
+      "question": "ما الخطوة التي تبدأ الحل بعد الوصول إلى مصفوفة مثلثية؟",
+      "expected": "back substitution / التعويض العكسي",
+      "pages": [
+        5,
+        6
+      ],
+      "retrieved": [
+        3,
+        1,
+        5,
+        7
+      ],
+      "answer": "الحلقة التي تبدأ فيها خطوة العودة العكسية إلى العناصر الأصلية تسمى \"الهابسة backwards substitution\"، وهي عملية يتم فيها حل نظام المعادلات بواسطة تمرير الأعمد من الخلف. هذا العملية مفهومة من خلال مثال من الصفحات المذكورة [MIT18_06S10_L02.pdf, page 7, chunk 24] حيث يُستخدم التجميع بين الأعمدة. هذا يعني أن الخطوة الأولى في الحل بعد الوصول إلى مصفوفة مثلثية هي حل المعادلات بواسطة العناصر الأصلية من الخلف.",
+      "seconds": 3.76,
+      "page_hit": true
+    },
+    {
+      "split": "dev",
+      "source": "MIT18_06S10_L02.pdf",
+      "question": "What room number is the final exam in?",
+      "expected": "ABSTAIN",
+      "pages": [],
+      "retrieved": [
+        8,
+        2,
+        5,
+        4
+      ],
+      "answer": "Could not find in the document",
+      "seconds": 0.64,
+      "page_hit": null
+    },
+    {
+      "split": "dev",
+      "source": "MIT18_06S10_L02.pdf",
+      "question": "عكس عملية طرح تلات أضعاف الصف الأول من التاني بنعمله إزاي؟",
+      "expected": "add three times row one to row two",
+      "pages": [
+        12
+      ],
+      "retrieved": [
+        8,
+        6,
+        1,
+        7
+      ],
+      "answer": "[MIT18_06S10_L02.pdf, page 7, chunk 24] هذا النص يجيب الإجابة على السؤال. حسب الوثيقة، العملية الأولى من القسم هي إزالة 3 أضعاف الصف الأول من الصف الثاني. هذا يعني أننا نريد أن نعمل عملية جبرية تقلل من الصف الثاني بـ 3 أضعاف الصف الأول. العملية المناسبة لذلك هي أن نعمل عملية جبرية تضيف إلى الصف الثاني ما يعادل 3 أضعاف الصف الأول. برمجياً، هذا يعني أننا نريد أن نأخذ الصف الأول (الصف الأول في التباديل) ونضربه بـ 3، ثم نضيف الناتج إلى الصف الثاني. لذا، فإن العملية الجبرية المناسبة التي نريد عملها هي:\n\n\\[\n\\text{الصف الثاني} + 3 \\times \\text{الصف الأول}\n\\]\n\nبالتالي، فإن إجابة السؤال هي أن العملية الجبرية المناسبة التي نريد عملها هي إضافة 3 أضعاف الصف الأول إلى الصف الثاني.",
+      "seconds": 6.1,
+      "page_hit": false
+    },
+    {
+      "split": "holdout",
+      "source": "MIT18_06S10_L02.pdf",
+      "question": "What does augmenting the matrix append to it?",
+      "expected": "right hand side / extra column b",
+      "pages": [
+        4,
+        5
+      ],
+      "retrieved": [
+        9,
+        1,
+        8,
+        6
+      ],
+      "answer": "Could not find in the document.",
+      "seconds": 0.78,
+      "page_hit": false
+    },
+    {
+      "split": "holdout",
+      "source": "MIT18_06S10_L02.pdf",
+      "question": "هو قال سعر تذكرة حضور المحاضرة كام؟",
+      "expected": "ABSTAIN",
+      "pages": [],
+      "retrieved": [
+        10,
+        5,
+        11,
+        9
+      ],
+      "answer": "could not find in the document",
+      "seconds": 0.96,
+      "page_hit": null
+    },
+    {
+      "split": "dev",
+      "source": "MIT18_06S10_L03.pdf",
+      "question": "What is the main operation introduced at the opening?",
+      "expected": "matrix multiplication",
+      "pages": [
+        1
+      ],
+      "retrieved": [],
+      "answer": "Could not find in the document.",
+      "seconds": 0.31,
+      "page_hit": false
+    },
+    {
+      "split": "dev",
+      "source": "MIT18_06S10_L03.pdf",
+      "question": "حاصل ضرب عمود في صف بيطلع مصفوفة ولا رقم واحد؟",
+      "expected": "matrix / مصفوفة",
+      "pages": [
+        4,
+        5
+      ],
+      "retrieved": [
+        3,
+        4,
+        4,
+        5
+      ],
+      "answer": "[1]",
+      "seconds": 0.93,
+      "page_hit": true
+    },
+    {
+      "split": "dev",
+      "source": "MIT18_06S10_L03.pdf",
+      "question": "What matrix do you get by multiplying a square invertible matrix by its inverse?",
+      "expected": "identity",
+      "pages": [
+        6,
+        8,
+        9,
+        11
+      ],
+      "retrieved": [
+        7,
+        5,
+        6,
+        6
+      ],
+      "answer": "[MIT18_06S10_L03.pdf, page 6, chunk 21] يُعطى مصفوفة ما عند ضرب مصفوفة مربعة م invertible وحدة م inverse في م同样的翻译为：当一个方阵乘以其逆矩阵时，得到的矩阵是什么？答案是 [MIT18_06S10_L03.pdf, page 6, chunk 21] ：一个方阵乘以其逆矩阵总是得到单位矩阵。",
+      "seconds": 2.77,
+      "page_hit": true
+    },
+    {
+      "split": "dev",
+      "source": "MIT18_06S10_L03.pdf",
+      "question": "المحاضر كان معاه كام جنيه في محفظته؟",
+      "expected": "ABSTAIN",
+      "pages": [],
+      "retrieved": [
+        5,
+        9,
+        9
+      ],
+      "answer": "Could not find in the document",
+      "seconds": 0.88,
+      "page_hit": null
+    },
+    {
+      "split": "dev",
+      "source": "MIT18_06S10_L03.pdf",
+      "question": "ما اسم طريقة الحذف المستخدمة لإيجاد المعكوس بالمصفوفة الموسعة؟",
+      "expected": "Gauss-Jordan",
+      "pages": [
+        9,
+        10,
+        11
+      ],
+      "retrieved": [
+        8,
+        6,
+        1,
+        7
+      ],
+      "answer": " tidak ada dalam dokumen yang dipilih",
+      "seconds": 1.25,
+      "page_hit": false
+    },
+    {
+      "split": "holdout",
+      "source": "MIT18_06S10_L03.pdf",
+      "question": "In the outer product example, do the columns point in the same direction?",
+      "expected": "yes / same direction",
+      "pages": [
+        4,
+        5
+      ],
+      "retrieved": [
+        8,
+        9,
+        9,
+        2
+      ],
+      "answer": "could not find in the document",
+      "seconds": 0.62,
+      "page_hit": false
+    },
+    {
+      "split": "holdout",
+      "source": "MIT18_06S10_L03.pdf",
+      "question": "What is the instructor's home street address?",
+      "expected": "ABSTAIN",
+      "pages": [],
+      "retrieved": [
+        1
+      ],
+      "answer": "Could not find in the document.",
+      "seconds": 0.39,
+      "page_hit": null
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+[
+  ["dev",1,"مين المدرس اللي عرّف نفسه في بداية المحاضرة؟","Gilbert Strang / جيلبرت سترانج",[1]],
+  ["dev",1,"What's the title of the textbook named in the opening?","Introduction to Linear Algebra",[1]],
+  ["dev",1,"تمثيل الصفوف في بعدين بيرسم خطوط ولا كرات؟","lines / خطوط",[1,2,3]],
+  ["dev",1,"ما اسم العملية التي تجمع مضاعفات أعمدة المصفوفة؟","linear combination / تركيب خطي",[4,5,11]],
+  ["dev",1,"What color jacket did the lecturer wear?","ABSTAIN",[]],
+  ["holdout",1,"في مثال تسع معادلات وتسعة مجاهيل، كام عمود في المصفوفة؟","9",[10]],
+  ["holdout",1,"What's the textbook title he uses?","Introduction to Linear Algebra",[1],"Who introduced himself as the instructor at the start?"],
+  ["dev",2,"What kind of matrix exchanges two rows?","permutation matrix / مصفوفة تبديل",[10]],
+  ["dev",2,"لما بنلحق الطرف الأيمن بالمصفوفة، اسمها إيه؟","augmented matrix / مصفوفة موسعة",[4,5]],
+  ["dev",2,"ما الخطوة التي تبدأ الحل بعد الوصول إلى مصفوفة مثلثية؟","back substitution / التعويض العكسي",[5,6]],
+  ["dev",2,"What room number is the final exam in?","ABSTAIN",[]],
+  ["dev",2,"عكس عملية طرح تلات أضعاف الصف الأول من التاني بنعمله إزاي؟","add three times row one to row two",[12]],
+  ["holdout",2,"What does augmenting the matrix append to it?","right hand side / extra column b",[4,5]],
+  ["holdout",2,"هو قال سعر تذكرة حضور المحاضرة كام؟","ABSTAIN",[]],
+  ["dev",3,"What is the main operation introduced at the opening?","matrix multiplication",[1]],
+  ["dev",3,"حاصل ضرب عمود في صف بيطلع مصفوفة ولا رقم واحد؟","matrix / مصفوفة",[4,5]],
+  ["dev",3,"What matrix do you get by multiplying a square invertible matrix by its inverse?","identity",[6,8,9,11]],
+  ["dev",3,"المحاضر كان معاه كام جنيه في محفظته؟","ABSTAIN",[]],
+  ["dev",3,"ما اسم طريقة الحذف المستخدمة لإيجاد المعكوس بالمصفوفة الموسعة؟","Gauss-Jordan",[9,10,11]],
+  ["holdout",3,"In the outer product example, do the columns point in the same direction?","yes / same direction",[4,5]],
+  ["holdout",3,"What is the instructor's home street address?","ABSTAIN",[]]
+]
