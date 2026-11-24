@@ -8,6 +8,16 @@ A local assistant for asking questions about your documents in Arabic or English
 - Combines keyword search (BM25) with semantic search (bge-m3 and ChromaDB).
 - Shows cited excerpts and links to PDF pages.
 
+## Screenshots
+
+**Answer with page citations**
+
+![Assembly lecture answer with links to the original PDF pages](screenshots/answer-and-sources.png)
+
+**Start a conversation**
+
+![Omar’s Library start screen with document selection and the message composer](screenshots/start-screen.png)
+
 ## Run locally on Windows
 
 Install Python 3.11+, Node.js 22.12+, and Ollama. With Ollama running, open PowerShell in the project folder:
