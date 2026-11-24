@@ -38,6 +38,11 @@ Open [the local app](http://127.0.0.1:5173/). Import a file from **Your library*
 
 ## Checks
 
+For machines with limited memory, pull `qwen2.5:3b` and set
+`OLLAMA_MODEL=qwen2.5:3b` and `OLLAMA_NUM_CTX=4096` before starting the API.
+Set `OLLAMA_CPU_ONLY=true` if Ollama fails with a CUDA error. CPU inference
+can be slower.
+
 Run `python -m unittest discover -s tests` from the project folder with the
 virtual environment active. From `frontend`, run `npm run lint` and
 `npm run build`.

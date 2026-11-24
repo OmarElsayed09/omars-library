@@ -478,7 +478,7 @@ def checked_reply(request: ChatTurnRequest, messages: list[dict], records: list[
     if not records and (request.source or route_query(request.message) == "document"):
         return ["ملقتش في الملفات دليل كافي أجاوب منه." if language == "ar" else
                 "I couldn't find enough evidence in the documents to answer that."]
-    options = {"temperature": 0.15, "num_ctx": 8192}
+    options = {"temperature": 0.15, "num_ctx": int(os.getenv("OLLAMA_NUM_CTX", "8192"))}
     if stream:
         chunks = agent.ollama_client.chat(model=agent.LLM, messages=messages, stream=True, options=options)
         parts = [chunk.message.content for chunk in chunks if chunk.message.content]

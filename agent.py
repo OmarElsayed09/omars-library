@@ -36,7 +36,19 @@ SEARCH_STOPWORDS = {
     "ذلك", "تلك", "التي", "الذي", "ثم", "كان", "كانت", "يكون", "لي",
 }
 
-ollama_client = ollama.Client(host=OLLAMA_HOST)
+class LocalOllamaClient(ollama.Client):
+    def chat(self, *args, options=None, **kwargs):
+        if os.getenv("OLLAMA_CPU_ONLY", "").lower() in {"1", "true", "yes"}:
+            options = {**(options or {}), "num_gpu": 0}
+        return super().chat(*args, options=options, **kwargs)
+
+    def embed(self, *args, options=None, **kwargs):
+        if os.getenv("OLLAMA_CPU_ONLY", "").lower() in {"1", "true", "yes"}:
+            options = {**(options or {}), "num_gpu": 0}
+        return super().embed(*args, options=options, **kwargs)
+
+
+ollama_client = LocalOllamaClient(host=OLLAMA_HOST)
 chroma_client = chromadb.PersistentClient(path=DB_DIR)
 collection = chroma_client.get_or_create_collection("docs")
 bm25_index = BM25Index()

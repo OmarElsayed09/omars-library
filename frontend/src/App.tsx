@@ -113,7 +113,7 @@ const translations = {
     you: 'You',
     emptyChats: 'Past conversations will appear here.',
     emptyDocs: 'Your library is waiting for its first document.',
-    welcome: 'Ask across your library',
+    welcome: 'What would you like to explore?',
     libraryHeading: 'Your documents',
     welcomeBody: 'Choose a file to ask about it and open the sources cited in the answer.',
     firstFile: 'Upload your first file',
@@ -190,7 +190,7 @@ const translations = {
     you: 'أنت',
     emptyChats: 'ستظهر محادثاتك السابقة هنا.',
     emptyDocs: 'مكتبتك جاهزة لاستقبال أول مستند.',
-    welcome: 'اسأل في مكتبتك',
+    welcome: 'حابب تسأل عن إيه؟',
     libraryHeading: 'مستنداتك',
     welcomeBody: 'اختار ملف واسأل عن محتواه، وافتح المصادر المذكورة في الإجابة.',
     firstFile: 'ارفع أول ملف',
@@ -1049,50 +1049,7 @@ function App() {
         </header>
         <section className={`conversation-stage ${messages.length ? 'has-messages' : ''}`}>
           <div className="message-stream">
-            {!messages.length ? (
-              <section className="welcome-panel">
-                <section className="library-overview" aria-labelledby="overview-title">
-                  <div className="library-overview-heading">
-                    <h2 id="overview-title">{t.libraryHeading} <span>{documents.length}</span></h2>
-                    <button className="panel-secondary-action" type="button" disabled={libraryBusy}
-                      onClick={() => fileInput.current?.click()}>
-                      {uploading ? <LoaderCircle className="spin" size={16} /> : <Plus size={16} />}
-                      {documents.length ? t.addFiles : t.firstFile}
-                    </button>
-                  </div>
-                  {documents.length ? (
-                    <div className="library-grid">
-                      {documents.map(({ source, chunks }) => (
-                        <button className="library-tile" key={source} type="button" title={source}
-                          aria-pressed={selectedSource === source} disabled={busy}
-                          onClick={() => setSelectedSource(selectedSource === source ? '' : source)}>
-                          <span className="library-tile-icon"><FileText size={18} aria-hidden="true" /></span>
-                          {selectedSource === source && <Check className="library-tile-check" size={16} aria-hidden="true" />}
-                          <strong dir="auto">{source}</strong>
-                          <small>{chunks} {t.chunks}</small>
-                        </button>
-                      ))}
-                    </div>
-                  ) : <p className="library-empty">{t.emptyDocs}</p>}
-                </section>
-                <section className="welcome-starters">
-                <h2>{t.starterHeading}</h2>
-                <div className="suggestion-row">
-                  {t.suggestions.map((suggestion) => (
-                    <button
-                      className="suggestion-card"
-                      key={suggestion}
-                      disabled={busy || !activeChatId}
-                      onClick={() => void sendMessage(suggestion)}
-                    >
-                      <span>{suggestion}</span>
-                      <ArrowUp className="suggestion-arrow" size={15} aria-hidden="true" />
-                    </button>
-                  ))}
-                </div>
-                </section>
-              </section>
-            ) : (
+            {messages.length > 0 && (
               <div className="message-list">
                 {messages.map((message, index) => (
                   <MessageBubble key={message.id} message={message} index={index} labels={t} chatId={activeChatId} />
@@ -1140,7 +1097,12 @@ function App() {
           )}
 
           <div className="composer-wrap">
-            {!messages.length && <h1 className="library-ask-title">{t.welcome}</h1>}
+            {!messages.length && (
+              <div className="chat-welcome">
+                <h1>{t.welcome}</h1>
+                <p>{t.welcomeBody}</p>
+              </div>
+            )}
             {documents.length > 0 && (
               <details className="composer-scope"
                 onBlur={(event) => {
@@ -1327,12 +1289,11 @@ function MessageBubble({
                 {feedback && <span role="status">{labels.feedbackSaved}</span>}
               </div>
             )}
-            {!!message.sources.length && (
-              <section className="sources-panel">
+            {message.content.trim() && !String(message.id).startsWith('stream-') && message.sources.length > 0 && (
+              <section className="sources-panel" aria-label={labels.sources}>
                 <div className="sources-heading">
                   <span><FileText size={14} />{labels.sources}</span>
-                  <span className="sources-rule" />
-                  <span>{message.sources.length.toString().padStart(2, '0')}</span>
+                  <span>{message.sources.length}</span>
                 </div>
                 <div className="source-list">
                   {message.sources.map((source, sourceIndex) => (
@@ -1341,24 +1302,21 @@ function MessageBubble({
                       id={sourceId(message.id, sourceIndex)}
                       key={`${source.source}-${source.page || 'doc'}-${source.chunk}`}
                     >
-                      <span className="source-number">{(sourceIndex + 1).toString().padStart(2, '0')}</span>
+                      <span className="source-number">{sourceIndex + 1}</span>
                       <div className="source-copy">
-                  <div className="source-name" dir="auto">{source.source}</div>
-                        <div className="source-meta">
-                          {source.page ? `${labels.page} ${source.page} · ` : ''}
-                          {labels.sources} {sourceIndex + 1}
+                        <div className="source-name" dir="auto" title={source.source}>{source.source}</div>
+                        <div className="source-actions">
+                          {source.page && source.source.toLowerCase().endsWith('.pdf') && (
+                            <a href={pdfPageUrl(source)} target="_blank" rel="noreferrer">
+                              {labels.page} {source.page} ↗
+                            </a>
+                          )}
                         </div>
-                        {source.page && source.source.toLowerCase().endsWith('.pdf') && (
-                          <a href={pdfPageUrl(source)} target="_blank" rel="noreferrer">
-                            {labels.page} {source.page} ↗
-                          </a>
-                        )}
                         <details className="source-excerpt">
                           <summary>{labels.excerpt}</summary>
                           <p>{source.content}</p>
                         </details>
                       </div>
-                      <Check className="source-check" size={14} />
                     </div>
                   ))}
                 </div>

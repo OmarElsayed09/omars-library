@@ -1273,6 +1273,57 @@
 .scope-options button span { overflow-wrap: anywhere; }
 .scope-options button svg { flex-shrink: 0; }
 .scope-options button:hover, .scope-options button[aria-pressed=true] { background: var(--accent-soft); }
+
+/* Chat-first workspace with a compact navigation rail on narrow screens. */
+.app-shell {
+  display: grid;
+  grid-template-columns: 244px minmax(0, 1fr);
+  background: #fff;
+}
+.app-shell > .app-header {
+  height: 100%;
+  min-height: 0;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  gap: 24px;
+  padding: 20px 12px;
+  overflow: auto;
+  background: #f2f8f5;
+  border-block-end: 0;
+  border-inline-end: 1px solid var(--line);
+}
+.app-header .header-controls { flex: 1; flex-direction: column; align-items: stretch; }
+.app-header .header-controls > button { justify-content: flex-start; }
+.app-header .header-controls > .connection-indicator { margin-block-start: auto; }
+.app-header .sidebar-history { display: grid; }
+.workspace-bar { min-height: 56px; }
+.conversation-stage:not(.has-messages) { justify-content: center; }
+.conversation-stage:not(.has-messages) .message-stream { display: none; }
+.conversation-stage:not(.has-messages) .composer-wrap { order: 0; }
+.chat-welcome { text-align: center; margin: 0 auto 24px; }
+.chat-welcome h1 { margin: 0; font-size: clamp(25px, 4vw, 38px); line-height: 1.25; }
+.chat-welcome p { margin: 8px 0 0; color: var(--muted); line-height: 1.6; }
+.composer { box-shadow: 0 4px 18px #183c2d12; }
+.sources-panel { margin-top: 16px; padding-top: 12px; border-top: 1px solid var(--line); }
+.sources-heading { letter-spacing: normal; color: var(--ink); }
+.sources-heading > span:last-child { color: var(--muted); }
+.source-list { grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr)); align-items: start; }
+.source-card { grid-template-columns: 24px minmax(0, 1fr); padding: 8px; background: #fff; }
+.source-number { width: 24px; height: 24px; font-size: 11px; }
+.source-name { font-size: 12px; }
+.source-actions a { color: var(--accent-dark); font-size: 12px; text-underline-offset: 3px; }
+.source-actions:empty { display: none; }
+.source-excerpt { margin-top: 4px; }
+@media (max-width: 760px) {
+  .app-shell { grid-template-columns: 54px minmax(0, 1fr); }
+  .app-shell > .app-header { padding: 12px 5px; gap: 16px; }
+  .app-header .header-controls > button { justify-content: center; }
+  .app-header .sidebar-history { display: none; }
+  .chat-welcome { margin-block-end: 16px; }
+  .chat-welcome p { font-size: 13px; }
+  .scope-options { width: max(100%, min(320px, calc(100vw - 80px))); }
+}
 .user-bubble { background: var(--accent-soft); }
 .answer-markdown { color: var(--ink); }
 .library-tile, .welcome-starters { box-shadow: 0 2px 8px #16493a0a; }
